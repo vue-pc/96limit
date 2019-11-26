@@ -46,5 +46,9 @@ export default [
     meta:{
       navShow:true
     }
+  },
+  {
+    path:'/',
+    redirect:'/home'
   }
 ]
