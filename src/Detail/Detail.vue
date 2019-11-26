@@ -2,18 +2,30 @@
   <div id="detail">
     <div class="toper">
       <div class="back"><</div>
-      <div class="top-title">中国 王朝 红葡萄酒 750ml</div>
+      <div class="top-title">53度 茅台飞天 （ 2019年产 ）200ml</div>
     </div>
     <div class="kongbai"></div>
-    <div class="nav">
-      <ul class="navList">
-        <li class="navItem active">商品</li>
-        <li class="navItem">详情</li> 
-        <li class="navItem">评价</li>
+    <div class="nav" :class="{active: this.scrollTop*1 >= 66}">
+      <ul class="navList" >
+        <li class="navItem"  
+        data-id="shoper" 
+        :class="{active:this.scrollTop*1 >= 0 && this.scrollTop*1 < 1366}"
+        @click="toChange"
+        >商品</li>
+        <li class="navItem"  
+        data-id="xiangqing" 
+        :class="{active:this.scrollTop*1 > 1366}"
+        @click="toChange"
+        >详情</li> 
+        <li class="navItem"  
+        data-id="pingjia" 
+        :class="{active:show}"
+         @click="toChange"
+        >评价</li>
       </ul>
     </div>
-    <div class="main">
-      <ul class="mianList">
+    <div class="main wrapper">
+      <ul class="mianList content">
         <li class="mianItem">
           <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -52,6 +64,7 @@
             </div>
           </div>
           <div class="songhuo">
+            <div class="city" v-show="xianshi" @click="toshow"></div>
             <div class="wenzi">
               <span>送至  上海市</span>
               <span class="redTitle">有货</span>
@@ -233,28 +246,43 @@
 <script type="text/ecmascript-6">
 import Swiper from 'swiper'
 import 'swiper/css/swiper.css'
+import BScroll from 'better-scroll'
+import litiem from '../data/litiem.json'
   export default {
     data(){
       return{
-        num:1
+        num:1,
+        scrollTop:0,
+        show:false,
+        data:{}
       }
     },
     mounted(){
+      this.data = litiem
        new Swiper('.swiper-container', {
           autoplay: true,//可选选项，自动滑动
           pagination: {
             el: '.swiper-pagination',
           },
-        })
+        }),
+        window.addEventListener('scroll', this.handleScroll)
     },
     methods:{
-      upNum(){
+      upNum($event){
         this.num = this.num + 1
+        console.log($event)
       },
       lowNum(){
         if(this.num !=1){
           this.num = this.num - 1
         }
+      },
+      handleScroll () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        this.scrollTop = scrollTop
+      },
+      toChange(){
+        this.show = !this.show
       }
     }
   }
@@ -283,6 +311,9 @@ import 'swiper/css/swiper.css'
       font-size 16px
       width 70%
       text-align center
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
   .kongbai
     margin-top 46px
     width 100%
@@ -298,6 +329,10 @@ import 'swiper/css/swiper.css'
     overflow hidden
     position absolute
     background #fff
+    &.active
+      position fixed
+      top 0
+      left 0
     .navList
       display flex
       align-items center
@@ -311,6 +346,7 @@ import 'swiper/css/swiper.css'
           border-bottom 1px solid #f44
   .main
     margin-top 44px
+    height calc(100vh - 110px)
     .mianList
       .mianItem
         .swiper-container
@@ -383,6 +419,9 @@ import 'swiper/css/swiper.css'
           display flex
           justify-content space-between
           border-bottom 1px solid #eee
+          .city
+
+
           .wenzi
             margin-top 9px
             display flex
