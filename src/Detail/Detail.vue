@@ -8,7 +8,7 @@
     <div class="nav">
       <ul class="navList">
         <li class="navItem active">商品</li>
-        <li class="navItem">详情</li>
+      <li class="navItem">详情</li> 
         <li class="navItem">评价</li>
       </ul>
     </div>
