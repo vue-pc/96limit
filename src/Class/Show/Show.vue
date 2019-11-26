@@ -1,25 +1,106 @@
 <template>
   <div id="showBox">
-    <div>
-      <i class="iconfont icon-jiantouyou"></i>
-    </div>
-        <!-- 搜索框 -->
-    <div class="search">
-      <!--            icon图标-->
-      <i class="box iconfont icon-sousuo"></i>
-      <input class="txt" type="text" placeholder="请输入商品名称">
-    </div>
-
+    <Show/>
+    <van-tabs v-model="active">
+      <van-tab title="综合">
+        <ul class="container">
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+        </ul>
+      </van-tab>
+      <van-tab title="销量">
+        <ul class="container">
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+        </ul>        
+      </van-tab>
+      <van-tab title="价格">
+        <ul class="container">
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+          <li class="container_left">
+            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
+            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
+            <div class="price">￥99999</div>
+            <div class="tip">666条好评<span></span>12%好评</div>
+          </li>
+        </ul>        
+      </van-tab>
+    </van-tabs>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import Show from '../../components/Search/Search'
   export default {
-    methods: {
-      goPath(path){
-      this.$route.path !== path && this.$router.replace(path)
-      },     
+    components: {
+      Show
     },
+    data() {
+      return {
+        active: 2
+      };
+    }
   }
 </script>
 
@@ -27,21 +108,36 @@
   #showBox
     width 100%
     height 100%
-    .search
-      background-color rgb(204,204,204)
-      width 265px
-      height 35px
-      line-height 35px
-      position absolute
-      top 5px
-      left 20px
-      .box
-        padding 0 10px   
-      .txt
-        outline none 
-        border none
-        width 220px
-        height 22px
-        background-color #cccccc
+    .container
+      width 100%
+      height 100%
+      .container_left
+        margin-top 10px 
+        width 175px
+        height 290px
+        float left      
+        margin-left 10px
+        .picture
+          width 160px
+          height 160px 
+        .tit
+          width 160px
+          height 36px
+          color #444
+          margin 5px 0
+          font-size 12px
+        .price
+          width 160px
+          height 14px
+          color red
+          font-size 16px
+          font-weight bold
+        .tip  
+          width 160px
+          height 22px
+          color #999
+          margin-top 10px
+          display flex
+          justify-content space-between
 
 </style>
