@@ -46,5 +46,10 @@ export default [
     meta:{
       navShow:true
     }
+  },
+  {
+    path: '/',
+    redirect: '/profile'
   }
+
 ]

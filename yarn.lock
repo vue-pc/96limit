@@ -46,7 +46,7 @@
   dependencies:
     "@babel/types" "^7.7.4"
 
-"@babel/helper-builder-binary-assignment-operator-visitor@^7.7.4":
+"@babel/helper-er-binary-assignment-operator-visitor@^7.7.4":
   version "7.7.4"
   resolved "https://registry.npm.taobao.org/@babel/helper-builder-binary-assignment-operator-visitor/download/@babel/helper-builder-binary-assignment-operator-visitor-7.7.4.tgz#5f73f2b28580e224b5b9bd03146a4015d6217f5f"
   integrity sha1-X3PysoWA4iS1ub0DFGpAFdYhf18=
