@@ -235,8 +235,11 @@
       </div>
       <div class="shoping">
         <i class="iconfont icon-gouwuche"></i>购物车
+        <span class="num">{{Bnum}}</span>
       </div>
-      <div class="buy">加入购物车</div>
+      <div class="buy" @click="upBnum">
+        加入购物车
+        </div>
       <div class="nowbuy">立即购买</div>
     </div>
   </div>
@@ -253,7 +256,8 @@ import litiem from '../data/litiem.json'
         num:1,
         scrollTop:0,
         show:false,
-        data:{}
+        data:{},
+        Bnum:0
       }
     },
     mounted(){
@@ -282,6 +286,9 @@ import litiem from '../data/litiem.json'
       },
       toChange(){
         this.show = !this.show
+      },
+      upBnum(){
+        this.Bnum = this.Bnum + 1
       }
     }
   }
@@ -577,6 +584,18 @@ import litiem from '../data/litiem.json'
       color #666
       .icon-gouwuche
         font-size 24px
+      .num
+        display block
+        width 14px
+        height 14px
+        border-radius 50%
+        text-align center
+        line-height 14px
+        background red
+        color #fff
+        position absolute
+        bottom 35px
+        left 85px
     .buy
       width 132px
       height 50px
