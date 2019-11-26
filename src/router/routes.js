@@ -15,9 +15,6 @@ export default [
   {
     path: '/detail',
     component: Detail,
-    meta: {
-      navShow:true
-    }
   },
   {
     path: '/home',
@@ -46,5 +43,9 @@ export default [
     meta:{
       navShow:true
     }
+  },
+  {
+    path:'/',
+    redirect: '/detail',
   }
 ]
