@@ -1,7 +1,7 @@
 <template>
   <div id="searchBox">
     <div class='showBox_icon'>
-      <i class="iconfont icon-jiantouyou" @click="goPath('/show')"></i>
+      <i class="iconfont icon-jiantouyou" @click="goPath('/class')"></i>
     </div>
 
         <!-- 搜索框 -->

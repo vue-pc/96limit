@@ -1,6 +1,6 @@
 <template>
   <div id="showBox">
-    <Show/>
+    <Search />
     <van-tabs v-model="active">
       <van-tab title="综合">
         <ul class="container">
@@ -91,10 +91,11 @@
 </template>
 
 <script type="text/ecmascript-6">
-import Show from '../../components/Search/Search'
+import Search from '../../components/Search/Search'
   export default {
+
     components: {
-      Show
+      Search
     },
     data() {
       return {

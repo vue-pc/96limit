@@ -2,7 +2,7 @@
   <div id="classContainer">
       <!-- 搜索栏 -->
     <div class="search">
-      <div class="searchBox">
+      <div class="searchBox" @click="goPath('/search')">
         <i class="iconfont icon-sousuo"></i>
         <span>请输入商品名称</span>
       </div>
