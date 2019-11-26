@@ -4,13 +4,20 @@ import Home from '../Home/Home.vue'
 import Profile from '../Profile/Profile.vue'
 import Shop from '../Shop/Shop.vue'
 
+
+import Show from '../Class/Show/Show.vue'
+
 export default [
   {
     path: '/class',
     component: Class,
     meta: {
       navShow:true
-    }
+    },
+  },
+  {
+    path: '/show',
+    component: Show,
   },
   {
     path: '/detail',
@@ -46,5 +53,9 @@ export default [
     meta:{
       navShow:true
     }
+  },
+  {
+    path: '/',
+    redirect:'/class'
   }
 ]
