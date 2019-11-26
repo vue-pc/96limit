@@ -8,7 +8,7 @@
     <div class="nav">
       <ul class="navList">
         <li class="navItem active">商品</li>
-      <li class="navItem">详情</li> 
+        <li class="navItem">详情</li> 
         <li class="navItem">评价</li>
       </ul>
     </div>
@@ -83,12 +83,149 @@
               <span>评价(40)</span>
               <span>好评度</span>
             </div>
-            <span>98%</span>
-            <span>></span>
+            <span class="imp">98%</span>
+            <i class="iconfont icon-label_arrow"></i>
+          </div>
+          <div class="detail">
+            <ul class="detailList">
+              <li class="detailItem">
+                <div class="left">
+                  <img src="../../public/images/user.png" alt="">
+                </div>
+                <div class="right">
+                  <div class="juyou">
+                    <p>188*****777</p>
+                    <p class="juyouTitile">银牌酒友</p>
+                  </div>
+                  <div class="star">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <span class="date">2019-10-28 22:47:58</span>
+                  </div>
+                  <p class="text">
+                     值得信赖！值得购买！多次购买，质量非常好，与卖家的描述完全一致，非常满意，真的很喜欢，性价比超高，完全超出期望值，发货速度非常快，包装也非常仔细，严实，物流公司服务态度非常非常好，运输速度也是非常非常快，很满意的一次购物！
+                  </p>
+                </div>
+              </li>
+              <li class="detailItem">
+                <div class="left">
+                  <img src="../../public/images/user.png" alt="">
+                </div>
+                <div class="right">
+                  <div class="juyou">
+                    <p>1390****218</p>
+                    <p class="juyouTitile">银牌酒友</p>
+                  </div>
+                  <div class="star">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <span class="date">2019-07-28 21:38:53</span>
+                  </div>
+                  <p class="text">
+                     好
+                  </p>
+                </div>
+              </li>
+              <li class="detailItem">
+                <div class="left">
+                  <img src="../../public/images/user.png" alt="">
+                </div>
+                <div class="right">
+                  <div class="juyou">
+                    <p>1360****418</p>
+                    <p class="juyouTitile">金牌酒友</p>
+                  </div>
+                  <div class="star">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <span class="date">2019-07-28 21:38:53</span>
+                  </div>
+                  <p class="text">
+                     不错的选择是对的
+                  </p>
+                </div>
+              </li>
+              <li class="detailItem">
+                <div class="left">
+                  <img src="../../public/images/user.png" alt="">
+                </div>
+                <div class="right">
+                  <div class="juyou">
+                    <p>湘江20****</p>
+                    <p class="juyouTitile">金牌酒友</p>
+                  </div>
+                  <div class="star">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <span class="date">2019-07-28 21:38:53</span>
+                  </div>
+                  <p class="text">
+                     十分的经典好喝
+                  </p>
+                </div>
+              </li>
+              <li class="detailItem">
+                <div class="left">
+                  <img src="../../public/images/user.png" alt="">
+                </div>
+                <div class="right">
+                  <div class="juyou">
+                    <p>雅雯</p>
+                    <p class="juyouTitile">普通酒友</p>
+                  </div>
+                  <div class="star">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <img src="../../public/images/xx.png" alt="">
+                    <span class="date">2019-07-28 21:38:53</span>
+                  </div>
+                  <p class="text">
+                     物流超快，头天晚上买第二天中午就送到了。别人给我推荐的第一次买尝尝，要是喝着对口儿以后平时喝口就是它了
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </li>
-
+        <li class="mianItem">
+          <div class="default">
+            查看全部评论
+            <i class="iconfont icon-label_arrow"></i>
+          </div>
+          <div class="vanTap">
+              <div class="vanTapNav">
+                <router-link to="/detail/shoper" class="vanTapNav1">商品介绍</router-link>
+                <router-link to="/detail/parameter" class="vanTapNav2">规格参考</router-link>
+                <router-link to="/detail/pack" class="vanTapNav3">包装售后</router-link>
+              </div>
+              <router-view></router-view>
+          </div>
+        </li>
       </ul>
+    </div>
+    <div class="footer">
+      <div class="home">
+        <i class="iconfont icon-shouye"></i>首页
+      </div>
+      <div class="shoping">
+        <i class="iconfont icon-gouwuche"></i>购物车
+      </div>
+      <div class="buy">加入购物车</div>
+      <div class="nowbuy">立即购买</div>
     </div>
   </div>
 </template>
@@ -290,12 +427,135 @@ import 'swiper/css/swiper.css'
           height 44px
           width 100%
           display flex
+          align-items center
           box-sizing border-box
           padding 10px 20px
+          border-bottom 1px solid #eee
           .reviewTitle
             width 90%
             display flex
             align-items center
             justify-content space-between
             font-size 16px
+          span 
+            font-size 16px
+          .imp
+            color red
+          .icon-label_arrow
+            color #999
+        .detail
+          .detailList
+            .detailItem
+              display flex
+              box-sizing border-box
+              padding 5px
+              border-top 1px solid #eee
+              .left
+                img 
+                  width 55px
+                  height 55px
+                  box-sizing border-box 
+                  padding 10px
+              .right
+                box-sizing border-box
+                padding-right 20px
+                .juyou
+                  display flex
+                  .juyouTitile
+                    border-radius 5px
+                    background #FF7F00
+                    color #fff
+                    font-weight normal
+                    font-size 12px
+                    margin-left 15px
+                    padding 2px 5px
+                .star
+                  img 
+                    width 15px
+                    height 15px
+                  .date
+                    margin-left 100px
+                    color #999
+                .text
+                  box-sizing border-box
+                  padding 10px 0px
+                  font-size 14px
+                  color #666
+        .default
+          width 360px
+          height 50px
+          margin 0 auto
+          border 1px solid #999
+          border-radius 15px
+          text-align center
+          line-height 50px
+          font-size 16px
+        .vanTap
+          box-sizing border-box
+          padding-top 5px
+          display flex
+          flex-direction column
+          .vanTapNav
+            height 44px
+            width 100%
+            font-size 16px
+            text-align center
+            line-height 44px
+            display flex
+            .vanTapNav1
+              width 33.33%
+            .vanTapNav2
+              width 33.33%
+              border-left 1px solid #999
+              border-right 1px solid #999
+            .vanTapNav3
+              width 33.33%
+  .footer
+    position fixed
+    bottom 0
+    left 0
+    height 50px
+    width 100% 
+    display flex
+    background #fff
+    .home
+      width 56px
+      height 50px
+      display flex
+      align-items center
+      flex-direction column
+      box-sizing border-box
+      padding 5px
+      border-right 1px solid #eee
+      color #666
+      .icon-shouye
+        font-size 24px
+    .shoping
+      width 56px
+      height 50px
+      display flex
+      align-items center
+      flex-direction column
+      box-sizing border-box
+      padding 5px
+      border-right 1px solid #eee
+      color #666
+      .icon-gouwuche
+        font-size 24px
+    .buy
+      width 132px
+      height 50px
+      background #f85
+      text-align center
+      line-height 50px
+      font-size 16px
+      color #fff
+    .nowbuy
+      width 132px
+      height 50px
+      background #f44
+      text-align center
+      line-height 50px
+      font-size 16px
+      color #fff
 </style>
