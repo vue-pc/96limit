@@ -64,7 +64,6 @@
             </div>
           </div>
           <div class="songhuo">
-            <div class="city" v-show="xianshi" @click="toshow"></div>
             <div class="wenzi">
               <span>送至  上海市</span>
               <span class="redTitle">有货</span>
@@ -419,9 +418,6 @@ import litiem from '../data/litiem.json'
           display flex
           justify-content space-between
           border-bottom 1px solid #eee
-          .city
-
-
           .wenzi
             margin-top 9px
             display flex
