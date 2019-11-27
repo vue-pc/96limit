@@ -10,17 +10,14 @@
         <li class="navItem"  
         data-id="shoper" 
         :class="{active:this.scrollTop*1 >= 0 && this.scrollTop*1 < 1366}"
-        @click="toChange"
         >商品</li>
         <li class="navItem"  
         data-id="xiangqing" 
         :class="{active:this.scrollTop*1 > 1366}"
-        @click="toChange"
         >详情</li> 
         <li class="navItem"  
         data-id="pingjia" 
-        :class="{active:show}"
-         @click="toChange"
+         @click="toChange('/pinglun')"
         >评价</li>
       </ul>
     </div>
@@ -100,14 +97,14 @@
           </div>
           <div class="detail">
             <ul class="detailList">
-              <li class="detailItem">
+              <li class="detailItem" v-for="(data, index) in datas" :key="index">
                 <div class="left">
                   <img src="../../public/images/user.png" alt="">
                 </div>
                 <div class="right">
                   <div class="juyou">
-                    <p>188*****777</p>
-                    <p class="juyouTitile">银牌酒友</p>
+                    <p>{{data.Usr_NiceName}}</p>
+                    <p class="juyouTitile">{{data.Usr_LeveName}}</p>
                   </div>
                   <div class="star">
                     <img src="../../public/images/xx.png" alt="">
@@ -115,98 +112,10 @@
                     <img src="../../public/images/xx.png" alt="">
                     <img src="../../public/images/xx.png" alt="">
                     <img src="../../public/images/xx.png" alt="">
-                    <span class="date">2019-10-28 22:47:58</span>
+                    <span class="date">{{data.CreateTime}}</span>
                   </div>
                   <p class="text">
-                     值得信赖！值得购买！多次购买，质量非常好，与卖家的描述完全一致，非常满意，真的很喜欢，性价比超高，完全超出期望值，发货速度非常快，包装也非常仔细，严实，物流公司服务态度非常非常好，运输速度也是非常非常快，很满意的一次购物！
-                  </p>
-                </div>
-              </li>
-              <li class="detailItem">
-                <div class="left">
-                  <img src="../../public/images/user.png" alt="">
-                </div>
-                <div class="right">
-                  <div class="juyou">
-                    <p>1390****218</p>
-                    <p class="juyouTitile">银牌酒友</p>
-                  </div>
-                  <div class="star">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <span class="date">2019-07-28 21:38:53</span>
-                  </div>
-                  <p class="text">
-                     好
-                  </p>
-                </div>
-              </li>
-              <li class="detailItem">
-                <div class="left">
-                  <img src="../../public/images/user.png" alt="">
-                </div>
-                <div class="right">
-                  <div class="juyou">
-                    <p>1360****418</p>
-                    <p class="juyouTitile">金牌酒友</p>
-                  </div>
-                  <div class="star">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <span class="date">2019-07-28 21:38:53</span>
-                  </div>
-                  <p class="text">
-                     不错的选择是对的
-                  </p>
-                </div>
-              </li>
-              <li class="detailItem">
-                <div class="left">
-                  <img src="../../public/images/user.png" alt="">
-                </div>
-                <div class="right">
-                  <div class="juyou">
-                    <p>湘江20****</p>
-                    <p class="juyouTitile">金牌酒友</p>
-                  </div>
-                  <div class="star">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <span class="date">2019-07-28 21:38:53</span>
-                  </div>
-                  <p class="text">
-                     十分的经典好喝
-                  </p>
-                </div>
-              </li>
-              <li class="detailItem">
-                <div class="left">
-                  <img src="../../public/images/user.png" alt="">
-                </div>
-                <div class="right">
-                  <div class="juyou">
-                    <p>雅雯</p>
-                    <p class="juyouTitile">普通酒友</p>
-                  </div>
-                  <div class="star">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <img src="../../public/images/xx.png" alt="">
-                    <span class="date">2019-07-28 21:38:53</span>
-                  </div>
-                  <p class="text">
-                     物流超快，头天晚上买第二天中午就送到了。别人给我推荐的第一次买尝尝，要是喝着对口儿以后平时喝口就是它了
+                     {{data.Content}}
                   </p>
                 </div>
               </li>
@@ -214,7 +123,7 @@
           </div>
         </li>
         <li class="mianItem">
-          <div class="default">
+          <div class="default" @click="toChange('/pinglun')">
             查看全部评论
             <i class="iconfont icon-label_arrow"></i>
           </div>
@@ -249,19 +158,22 @@
 import Swiper from 'swiper'
 import 'swiper/css/swiper.css'
 import BScroll from 'better-scroll'
-import litiem from '../data/litiem.json'
+import detailRev from '../data/detailRev.json'
+import Pinglun from '../pages/Pinglun/Pinglun'
   export default {
     data(){
       return{
         num:1,
         scrollTop:0,
-        show:false,
-        data:{},
+        datas:{},
         Bnum:0
       }
     },
+    components:{
+      Pinglun
+    },
     mounted(){
-      this.data = litiem
+      this.datas = detailRev.data.slice(0, 5)
        new Swiper('.swiper-container', {
           autoplay: true,//可选选项，自动滑动
           pagination: {
@@ -284,11 +196,20 @@ import litiem from '../data/litiem.json'
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
         this.scrollTop = scrollTop
       },
-      toChange(){
+      toChange(path){
         this.show = !this.show
+        this.$router.replace(path)
       },
       upBnum(){
-        this.Bnum = this.Bnum + 1
+        if(this.num != 1){
+          this.Bnum = this.Bnum + this.num
+        }else{
+          this.Bnum = this.Bnum + 1
+        }
+        
+      },
+      newData(){
+        this.data = this.data
       }
     }
   }
@@ -516,7 +437,7 @@ import litiem from '../data/litiem.json'
                     width 15px
                     height 15px
                   .date
-                    margin-left 100px
+                    margin-left 80px
                     color #999
                 .text
                   box-sizing border-box

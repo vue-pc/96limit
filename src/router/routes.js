@@ -6,6 +6,7 @@ import Shop from '../Shop/Shop.vue'
 import Shoper from '../components/Shoper/Shoper.vue'
 import Parameter from '../components/Parameter/Parameter.vue'
 import Pack from '../components/Pack/Pack.vue'
+import Pinglun from '../pages/Pinglun/Pinglun.vue'
 
 export default [
   {
@@ -31,7 +32,10 @@ export default [
         path: '/detail/pack',
         component: Pack,
       },
-
+      {
+        path:'/detail',
+        redirect: '/detail/shoper',
+      }
     ]
   },
   {
@@ -61,6 +65,10 @@ export default [
     meta:{
       navShow:true
     }
+  },
+  {
+    path:'/pinglun',
+    component:Pinglun,
   },
   {
     path:'/',
