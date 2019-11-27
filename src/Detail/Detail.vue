@@ -9,16 +9,19 @@
       <ul class="navList" >
         <li class="navItem"  
         data-id="shoper" 
-        :class="{active:this.scrollTop*1 >= 0 && this.scrollTop*1 < 822}"
+        :class="{active:this.scrollTop*1 >= 0 && this.scrollTop*1 < 780}"
         >商品</li>
-        <li class="navItem"  
-        data-id="xiangqing" 
-        :class="{active:this.scrollTop*1 > 822}"
-        >详情</li> 
+
         <li class="navItem"  
         data-id="pingjia" 
          @click="toChange('/pinglun')"
+         :class="{active:this.scrollTop*1 >780 && this.scrollTop*1 < 2555}"
         >评价</li>
+
+        <li class="navItem"  
+        data-id="xiangqing" 
+        :class="{active:this.scrollTop*1 > 2555}"
+        >详情</li> 
       </ul>
     </div>
     <div class="main wrapper">
@@ -60,12 +63,23 @@
               <span class="jian" @click="upNum">+</span>
             </div>
           </div>
-          <div class="songhuo">
+          <div class="songhuo"  @click="toShow">
             <div class="wenzi">
               <span>送至  上海市</span>
               <span class="redTitle">有货</span>
             </div>
             <div class="more">></div>
+          </div>
+          <div class="cover" v-show="!show" @click="toShow">
+            <div class="citybox">
+              <div class="city">
+                <van-area
+                  :area-list="areaList"
+                  title="选择城市"
+                  value="110101"
+                />
+              </div>
+            </div>
           </div>
           <div class="vanCell">
             <span>提示 两瓶配一个手提袋</span>
@@ -158,6 +172,11 @@
 import Swiper from 'swiper'
 import 'swiper/css/swiper.css'
 import BScroll from 'better-scroll'
+import Vant from 'vant'
+import 'vant/lib/index.css'
+import { Area } from 'vant'
+
+
 
 import Pinglun from '../pages/Pinglun/Pinglun'
 import {mapState} from 'vuex'
@@ -167,7 +186,8 @@ import {mapState} from 'vuex'
         num:1,
         scrollTop:0,
         datas:{},
-        Bnum:0
+        Bnum:0,
+        show:true
       }
     },
     components:{
@@ -207,7 +227,9 @@ import {mapState} from 'vuex'
         }else{
           this.Bnum = this.Bnum + 1
         }
-        
+      },
+      toShow(){
+        this.show = !this.show
       }
     
     },
@@ -370,6 +392,25 @@ import {mapState} from 'vuex'
           .more
             font-size 24px
             color #eee
+        .cover
+          position fixed
+          z-index 100
+          top 0
+          bottom 0
+          background rgba(0,0,0,0.5)
+          width 100%
+          height 100%
+          .citybox
+            position fixed
+            left 0
+            bottom 0
+            width 100%
+            height 260px
+            margin 0 auto
+            background #fff
+            .city
+              width 100%
+              background pink
         .vanCell
           width 100%
           height 96
