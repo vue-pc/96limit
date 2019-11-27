@@ -11,74 +11,50 @@
     <div class="list">
       <div class="box">
         <div class="title">
-          <span>你懂的</span>
+          <span>白酒</span>
           <a href="http://m.gjw.com/AllClass-1-baijiu.html">查看全部&nbsp;&gt;</a>
         </div>
-        <ul class="listRow">
-          <li  @click="goPath('/show')">大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
+         <ul class="listRow">
+          <li class="spacerow" @click="goPath('/show')" >茅台</li>
+          <li class="spacerow">习酒</li>
+          <li class="spacerow" @click="goPath('/show')" >五粮液</li>
+          <li class="spacerow">珍酒</li>
+          <li class="spacerow" @click="goPath('/show')" >剑南春</li>
+          <li class="spacerow">四特</li>
+          <li class="spacerow" @click="goPath('/show')" >汾酒</li>
+          <li class="spacerow">泸州老窖</li>
+          <li class="spacerow" @click="goPath('/show')" >郎酒</li>
+          <li class="spacerow">西凤</li>
+          <li class="spacerow" @click="goPath('/show')" >古井贡酒</li>
+          <li class="spacerow">杜康</li>
+          <li class="spacerow" @click="goPath('/show')" >舍得</li>
+          <li class="spacerow">全兴</li>
+          <li class="spacerow" @click="goPath('/show')" >茅台</li>
+          <li class="spacerow">国台</li>          
         </ul>
       </div>
       <div class="box">
         <div class="title">
-          <span>点进来</span>
+          <span>葡萄酒</span>
           <a href="http://m.gjw.com/AllClass-1-baijiu.html">查看全部&nbsp;&gt;</a>
         </div>
         <ul class="listRow">
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          <li class="rightRow">渣渣灰</li>
-          <li>大学委</li>
-          
-        </ul>
-      </div>
-      <div class="box">
-        <div class="title">
-          <span>洋酒</span>
-          <a href="http://m.gjw.com/AllClass-1-baijiu.html">查看全部&nbsp;&gt;</a>
-        </div>
-        <ul class="listRow">
-          <li>芝华士</li>
-          <li class="rightRow">人头马</li>
-          <li>XO</li>
-          <li class="rightRow">轩尸尼</li>
-          <li>杰克丹尼</li>
-          <li class="rightRow">福佳白</li>  
+          <li class="spacerow" @click="goPath('/show')" >奔富</li>
+          <li class="spacerow">拉菲</li>
+          <li class="spacerow" @click="goPath('/show')" >中级庄</li>
+          <li class="spacerow">红魔鬼</li>
+          <li class="spacerow" @click="goPath('/show')" >长城</li>
+          <li class="spacerow">王朝</li>
+          <li class="spacerow" @click="goPath('/show')" >张裕</li>
+          <li class="spacerow">马爹利</li>
+          <li class="spacerow" @click="goPath('/show')" >人头马</li>
+          <li class="spacerow">芝华士</li>
+          <li class="spacerow" @click="goPath('/show')" >百龄坛</li>
+          <li class="spacerow">女儿红</li>
+          <li class="spacerow" @click="goPath('/show')" >一本义</li>
+          <li class="spacerow">福佳</li>
+          <li class="spacerow" @click="goPath('/show')" >1664</li>
+          <li class="spacerow">科罗娜</li>          
         </ul>
       </div>
     </div>
@@ -86,12 +62,14 @@
 </template>
 
 <script type="text/ecmascript-6">
+
   export default {
     methods: {
       goPath(path){
       this.$route.path !== path && this.$router.replace(path)
       },     
     },
+  
   }
 </script>
 
@@ -135,17 +113,14 @@
             font-size 12px
         .listRow
           font-size 13px
-          li 
-            width 48%
+          .spacerow 
+            width 49%
             height 35px
-            padding-left 1%
+            padding-right 1%
             line-height 35px            
             background-color #f3f3f3
             display inline-block
             margin-bottom 5px
-          .rightRow
-            float right 
-            width 49%
-            margin-left 1% 
+            background-clip content-box
 
 </style>

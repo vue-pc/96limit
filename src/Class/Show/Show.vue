@@ -1,106 +1,73 @@
 <template>
   <div id="showBox">
     <Search />
+
     <van-tabs v-model="active">
       <van-tab title="综合">
         <ul class="container">
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
+          <li class="container_left"  v-for="(list,index) in classList" :key="index">
+            <img class="picture"  :src="list.img" >
+            <p class="tit">{{list.productname}}</p>
+            <div class="price">￥{{list.price}}</div>
             <div class="tip">666条好评<span></span>12%好评</div>
           </li>
         </ul>
+        
+         
       </van-tab>
       <van-tab title="销量">
         <ul class="container">
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
+          <li class="container_left"  v-for="(list,index) in classList" :key="index">
+            <img class="picture":src="list.img" >
+            <p class="tit">{{list.productname}}</p>
+            <div class="price">￥{{list.price}}</div>
             <div class="tip">666条好评<span></span>12%好评</div>
           </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
+
+
+
         </ul>        
       </van-tab>
       <van-tab title="价格">
         <ul class="container">
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
-            <div class="tip">666条好评<span></span>12%好评</div>
-          </li>
-          <li class="container_left">
-            <img class="picture" src="http://img0.gjw.com/product/2019/0813/94ff85adea814fd89cce17556bbce5dd_2.jpg" alt="">
-            <p class="tit">53度 茅台 飞天带杯（ 2019年产 ）500ml</p>
-            <div class="price">￥99999</div>
+          <li class="container_left"  v-for="(list,index) in classList" :key="index">
+            <img class="picture":src="list.img" >
+            <p class="tit">{{list.productname}}</p>
+            <div class="price">￥{{list.price}}</div>
             <div class="tip">666条好评<span></span>12%好评</div>
           </li>
         </ul>        
       </van-tab>
     </van-tabs>
+
+
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import Search from '../../components/Search/Search'
+ import {mapState} from 'vuex'
   export default {
-
+    async mounted() {
+      this.$store.dispatch('getClassListAction')
+    },
+    computed:{
+      ...mapState({
+        classList: state => state.classList
+      })
+    },
     components: {
       Search
     },
     data() {
       return {
-        active: 2
-      };
+        active: 2,
+        imageList: [
+        'https://img.yzcdn.cn/vant/apple-1.jpg',
+        'https://img.yzcdn.cn/vant/apple-2.jpg'
+      ]
+    };
+      
     }
   }
 </script>

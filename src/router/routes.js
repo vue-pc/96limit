@@ -60,6 +60,6 @@ export default [
   },
   {
     path: '/',
-    redirect:'/show'
+    redirect:'/class'
   }
 ]

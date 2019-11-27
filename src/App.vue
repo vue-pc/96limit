@@ -13,6 +13,6 @@ import FooterGuide from './components/FooterGuide/FooterGuide'
   }
 </script>
 
-<style>
+<style lang="stylus" rel="stylesheet/stylus">
 
 </style>
