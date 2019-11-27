@@ -7,6 +7,9 @@ import Shoper from '../components/Shoper/Shoper.vue'
 import Parameter from '../components/Parameter/Parameter.vue'
 import Pack from '../components/Pack/Pack.vue'
 import Pinglun from '../pages/Pinglun/Pinglun.vue'
+import Search from '../components/Search/Search.vue'
+
+import Show from '../Class/Show/Show.vue'
 
 export default [
   {
@@ -14,7 +17,11 @@ export default [
     component: Class,
     meta: {
       navShow:true
-    }
+    },
+  },
+  {
+    path: '/show',
+    component: Show,
   },
   {
     path: '/detail',
@@ -71,7 +78,12 @@ export default [
     component:Pinglun,
   },
   {
-    path:'/',
-    redirect: '/detail',
+
+    path:'/search',
+    component:Search
+  },
+  {
+    path: '/',
+    redirect:'/home'
   }
 ]

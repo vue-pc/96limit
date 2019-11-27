@@ -2,7 +2,7 @@
   <div id="footer">
     <div class="guideItem" :class="{active:$route.path === '/home'}" @click="goPath('/home')">
       <span>
-        <i class="iconfont "></i>
+        <i class="iconfont icon-home"></i>
       </span>
       <span>
         首页
@@ -10,15 +10,15 @@
     </div>
     <div class="guideItem" :class="{active:$route.path === '/class'}" @click="goPath('/class')">
       <span>
-        <i class="iconfont "></i>
+        <i class="iconfont icon-class"></i>
       </span>
       <span>
         分类
       </span>
     </div>
-    <div class="guideItem" :class="{active:$route.path === '/detail'}" @click="goPath('/detail')">
+    <div style="color:red;"  class="guideItem" :class="{active:$route.path === '/detail'}" @click="goPath('/detail')">
       <span>
-        <i class="iconfont "></i>
+        <i class="iconfont icon-redbag"></i>
       </span>
       <span>
         专享福利
@@ -26,7 +26,7 @@
     </div>
     <div class="guideItem" :class="{active:$route.path === '/shop'}" @click="goPath('/shop')">
       <span>
-        <i class="iconfont "></i>
+        <i class="iconfont icon-gouwuche1"></i>
       </span>
       <span>
         购物车
@@ -34,10 +34,10 @@
     </div>
     <div class="guideItem" :class="{active:$route.path === '/profile'}" @click="goPath('/profile')">
       <span>
-        <i class="iconfont "></i>
+        <i class="iconfont icon-user_name"></i>
       </span>
       <span>
-        我得
+        我的
       </span>
     </div>
   </div>
@@ -72,9 +72,9 @@
       flex-direction column
       span
         i
-          font-size 50px
+          font-size 20px
         &:first-child
           margin 6px 0
       &.active
-        color red
+        color green
 </style>
