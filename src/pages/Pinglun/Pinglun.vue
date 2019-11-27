@@ -10,7 +10,7 @@
           </div>
           <div class="detail">
             <ul class="detailList">
-              <li class="detailItem" v-for="(data, index) in datas" :key="index">
+              <li class="detailItem" v-for="(data, index) in pinglun" :key="index">
                 <div class="left">
                   <img src="../../../public/images/user.png" alt="">
                 </div>
@@ -39,7 +39,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-import datas from '../../data/czcpinglun.json'
+import {mapState} from 'vuex'
   export default {
     data(){
       return{
@@ -47,12 +47,18 @@ import datas from '../../data/czcpinglun.json'
       }
     },
     mounted(){
-      this.datas = datas.data
+      this.$store.dispatch('getPinglunAction')
     },
     methods:{
       goBack(){
         this.$router.replace('/detail')
       }
+    },
+
+    computed:{
+      ...mapState({
+        pinglun : state => state.pinglun.pinglun.data
+      })
     }
   }
 </script>

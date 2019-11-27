@@ -9,11 +9,11 @@
       <ul class="navList" >
         <li class="navItem"  
         data-id="shoper" 
-        :class="{active:this.scrollTop*1 >= 0 && this.scrollTop*1 < 1366}"
+        :class="{active:this.scrollTop*1 >= 0 && this.scrollTop*1 < 822}"
         >商品</li>
         <li class="navItem"  
         data-id="xiangqing" 
-        :class="{active:this.scrollTop*1 > 1366}"
+        :class="{active:this.scrollTop*1 > 822}"
         >详情</li> 
         <li class="navItem"  
         data-id="pingjia" 
@@ -158,8 +158,9 @@
 import Swiper from 'swiper'
 import 'swiper/css/swiper.css'
 import BScroll from 'better-scroll'
-import detailRev from '../data/detailRev.json'
+
 import Pinglun from '../pages/Pinglun/Pinglun'
+import {mapState} from 'vuex'
   export default {
     data(){
       return{
@@ -173,14 +174,14 @@ import Pinglun from '../pages/Pinglun/Pinglun'
       Pinglun
     },
     mounted(){
-      this.datas = detailRev.data.slice(0, 5)
-       new Swiper('.swiper-container', {
-          autoplay: true,//可选选项，自动滑动
-          pagination: {
-            el: '.swiper-pagination',
-          },
-        }),
-        window.addEventListener('scroll', this.handleScroll)
+      this.$store.dispatch('getDetailRevAction')
+      new Swiper('.swiper-container', {
+        autoplay: true,//可选选项，自动滑动
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      }),
+      window.addEventListener('scroll', this.handleScroll)
     },
     methods:{
       upNum($event){
@@ -207,9 +208,20 @@ import Pinglun from '../pages/Pinglun/Pinglun'
           this.Bnum = this.Bnum + 1
         }
         
-      },
-      newData(){
-        this.data = this.data
+      }
+    
+    },
+    computed:{
+      ...mapState({
+        mainRev : state => state.mainrev.mainRev.data
+      }),
+    },
+    watch:{
+      mainRev(){
+        this.$nextTick(()=>{
+          this.datas = this.mainRev
+        })
+        
       }
     }
   }
