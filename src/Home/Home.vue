@@ -117,15 +117,15 @@
       <span class='miaosha_one'>掌上生活</span>
       <span class='miaosha_two'>距结束</span>
 
-      <div class='date'>
-        22
-      </div>
-      <div class='date'>
-        40
-      </div>
-      <div class='date'>
-        40
-      </div>
+      <van-count-down :time="time">
+        <template v-slot="timeData">
+          <span class="data">{{ timeData.hours }}</span>
+          <span class="data">{{ timeData.minutes }}</span>
+          <span class="data">{{ timeData.seconds }}</span>
+        </template>
+      </van-count-down>
+
+
     </div>
 
     <!-- 马上抢 -->
@@ -403,7 +403,8 @@ export default {
   data(){
     return{
       datas:{},      
-      active: 2
+      active: 2,
+      time: 30 * 45 * 45 * 1000
     }
   },
    methods: {
@@ -522,15 +523,16 @@ export default {
           color #6b6b6b
           margin 0 10px 0 0 
           float left 
-        .date
+        .data
           width 22px
           height 22px
           line-height 22px
           text-align center
           background #999
           border-radius 5px
-          float left 
-          margin-left 3px
+          float left
+          color #fff
+          margin-left 5px
           margin-top -2px
       .shopping
         width 100%

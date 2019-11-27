@@ -6,10 +6,11 @@ import 'lib-flexible/flexible'
 
 import { Tab, Tabs } from 'vant';
 import * as API from './api'
-
+import { CountDown } from 'vant';
 
 import store from './store'
 
+Vue.use(CountDown);
 
 Vue.use(Tab).use(Tabs);
 
