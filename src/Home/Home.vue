@@ -402,7 +402,8 @@ import homeDate from '../data/home.json'
 export default {
   data(){
     return{
-      datas:{}
+      datas:{},      
+      active: 2
     }
   },
    methods: {
@@ -418,21 +419,16 @@ export default {
       pagination: {
         el: ".swiper-pagination"
       }
-    })
+    }),
+    this.datas = homeDate
   },
   computed:{
       ...mapState({
         picture: state => state.picture
       })
     },
-   data() {
-    return {
-      active: 2
-    }
-  },
-  mounted() {
-    this.datas = homeDate
-  },
+
+
 }
 </script>
 
