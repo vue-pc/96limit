@@ -2,13 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import 'lib-flexible/flexible'
-
-
-import { Tab, Tabs } from 'vant';
-import * as API from './api'
-import { CountDown } from 'vant';
-
 import store from './store'
+
+import { Tab, Tabs,CountDown } from 'vant';
+import * as API from './api'
+
+
+
 
 Vue.use(CountDown);
 

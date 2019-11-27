@@ -1,11 +1,11 @@
 import {
-  SAVE_PICTURE
+  SAVE_PICTURELIST
 } from './mutation-type'
 
 
 
 export default {
-  [SAVE_PICTURE](state, {picture}){
-    state.picture = picture
+  [SAVE_PICTURELIST](state, {pictureList}){
+    state.pictureList = pictureList
   },
 }

@@ -151,14 +151,13 @@
 
     <!-- 正品保证 -->
     <div class='zhengpin'>
-
-       <div class='zhengpin_one'>
-         <i class="icon_one iconfont icon-duigou"></i>
-         <span class='zhengpin_text'>正品保证</span>
-         <i class="icon_one iconfont icon-boxxiangzi"></i>
-         <span class='zhengpin_text'>开箱验货</span>
-         <i class="icon_one iconfont icon-yusan01"></i>
-         <span class='zhengpin_text'>赔付保障</span>
+        <div class='zhengpin_one'>
+          <i class="icon_one iconfont icon-duigou"></i>
+          <span class='zhengpin_text'>正品保证</span>
+          <i class="icon_one iconfont icon-boxxiangzi"></i>
+          <span class='zhengpin_text'>开箱验货</span>
+          <i class="icon_one iconfont icon-yusan01"></i>
+          <span class='zhengpin_text'>赔付保障</span>
        </div>
     </div>
  
@@ -181,11 +180,11 @@
         <van-tab title="精选">
           <ul class='liebiao'>
             <!-- ------------------------------------------------- -->
-            <li class='liebiao_item' v-for="(homepic,index) in picture" :key="index">
-              <img :src='homepic.data.Pic'>
-              <span class='liebiao_text'>{{homepic.data.Name}}</span>
-              <span class='liebiao_one'>{{homepic.data.listAtivityName.Ativityname}}</span>
-              <span class='liebiao_two'>￥{{homepic.data.ExtField}}</span>
+            <li class='liebiao_item' v-for="(homepic,index) in pictureList" :key="index">
+              <img :src='homepic.img'>
+              <span class='liebiao_text'>{{homepic.productname}}</span>
+              <span class='liebiao_one'>{{homepic.name}}</span>
+              <span class='liebiao_two'>￥{{homepic.price}}</span>
             </li>
           
 
@@ -197,36 +196,12 @@
         <van-tab title="白酒">
           <ul class='liebiao'>
             <!-- ------------------------------------------------- -->
-            <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0814/ffdef549b26d4b1fb696cfb0a27d3b84_2.jpg'>
-              <span class='liebiao_text'>【整箱装】53度 茅台 蓝色迎宾酒 (2017年产) 425ml*6瓶</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
+            <li class='liebiao_item' v-for="(homepic,index) in pictureList" :key="index">
+              <img :src='homepic.img'>
+              <span class='liebiao_text'>{{homepic.productname}}</span>
+              <span class='liebiao_one'>{{homepic.name}}</span>
+              <span class='liebiao_two'>￥{{homepic.price}}</span>
             </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2017/1013/05d96515d0ab4f7db04ed877d01d26f9_2.jpg'>
-              <span class='liebiao_text'>52度 剑南春 1000ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2018/0914/02398b678ef7481cadcf38c28916cbec_2.jpg'>
-              <span class='liebiao_text'>53度 茅台 飞天带杯（ 2019年产 ）500ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-           
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0619/2c8dbf4020174ccb94447ea1c3d825dd_2.jpg'>
-              <span class='liebiao_text'>42度 扳倒井 福樽 （2012年产）480ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
            
             <!-- ------------------------------------------------- -->
           </ul>
@@ -235,36 +210,12 @@
         <van-tab title="葡萄酒">
           <ul class='liebiao'>
             <!-- ------------------------------------------------- -->
-            <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0814/ffdef549b26d4b1fb696cfb0a27d3b84_2.jpg'>
-              <span class='liebiao_text'>【整箱装】53度 茅台 蓝色迎宾酒 (2017年产) 425ml*6瓶</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-            </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2017/1013/05d96515d0ab4f7db04ed877d01d26f9_2.jpg'>
-              <span class='liebiao_text'>52度 剑南春 1000ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2018/0914/02398b678ef7481cadcf38c28916cbec_2.jpg'>
-              <span class='liebiao_text'>53度 茅台 飞天带杯（ 2019年产 ）500ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-           
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0619/2c8dbf4020174ccb94447ea1c3d825dd_2.jpg'>
-              <span class='liebiao_text'>42度 扳倒井 福樽 （2012年产）480ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
+            <li class='liebiao_item' v-for="(homepic,index) in pictureList" :key="index">
+              <img :src='homepic.img'>
+              <span class='liebiao_text'>{{homepic.productname}}</span>
+              <span class='liebiao_one'>{{homepic.name}}</span>
+              <span class='liebiao_two'>￥{{homepic.price}}</span>
+            </li>            
            
             <!-- ------------------------------------------------- -->
           </ul>
@@ -273,36 +224,12 @@
         <van-tab title="清酒">
           <ul class='liebiao'>
             <!-- ------------------------------------------------- -->
-            <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0814/ffdef549b26d4b1fb696cfb0a27d3b84_2.jpg'>
-              <span class='liebiao_text'>【整箱装】53度 茅台 蓝色迎宾酒 (2017年产) 425ml*6瓶</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-            </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2017/1013/05d96515d0ab4f7db04ed877d01d26f9_2.jpg'>
-              <span class='liebiao_text'>52度 剑南春 1000ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2018/0914/02398b678ef7481cadcf38c28916cbec_2.jpg'>
-              <span class='liebiao_text'>53度 茅台 飞天带杯（ 2019年产 ）500ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-           
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0619/2c8dbf4020174ccb94447ea1c3d825dd_2.jpg'>
-              <span class='liebiao_text'>42度 扳倒井 福樽 （2012年产）480ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
+            <li class='liebiao_item' v-for="(homepic,index) in pictureList" :key="index">
+              <img :src='homepic.img'>
+              <span class='liebiao_text'>{{homepic.productname}}</span>
+              <span class='liebiao_one'>{{homepic.name}}</span>
+              <span class='liebiao_two'>￥{{homepic.price}}</span>
+            </li> 
            
             <!-- ------------------------------------------------- -->
           </ul>
@@ -311,36 +238,12 @@
         <van-tab title="黄酒">
           <ul class='liebiao'>
             <!-- ------------------------------------------------- -->
-            <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0814/ffdef549b26d4b1fb696cfb0a27d3b84_2.jpg'>
-              <span class='liebiao_text'>【整箱装】53度 茅台 蓝色迎宾酒 (2017年产) 425ml*6瓶</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-            </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2017/1013/05d96515d0ab4f7db04ed877d01d26f9_2.jpg'>
-              <span class='liebiao_text'>52度 剑南春 1000ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2018/0914/02398b678ef7481cadcf38c28916cbec_2.jpg'>
-              <span class='liebiao_text'>53度 茅台 飞天带杯（ 2019年产 ）500ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-           
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0619/2c8dbf4020174ccb94447ea1c3d825dd_2.jpg'>
-              <span class='liebiao_text'>42度 扳倒井 福樽 （2012年产）480ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
+            <li class='liebiao_item' v-for="(homepic,index) in pictureList" :key="index">
+              <img :src='homepic.img'>
+              <span class='liebiao_text'>{{homepic.productname}}</span>
+              <span class='liebiao_one'>{{homepic.name}}</span>
+              <span class='liebiao_two'>￥{{homepic.price}}</span>
+            </li> 
            
             <!-- ------------------------------------------------- -->
           </ul>
@@ -349,36 +252,12 @@
         <van-tab title="年份老酒">
           <ul class='liebiao'>
             <!-- ------------------------------------------------- -->
-            <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0814/ffdef549b26d4b1fb696cfb0a27d3b84_2.jpg'>
-              <span class='liebiao_text'>【整箱装】53度 茅台 蓝色迎宾酒 (2017年产) 425ml*6瓶</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-            </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2017/1013/05d96515d0ab4f7db04ed877d01d26f9_2.jpg'>
-              <span class='liebiao_text'>52度 剑南春 1000ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2018/0914/02398b678ef7481cadcf38c28916cbec_2.jpg'>
-              <span class='liebiao_text'>53度 茅台 飞天带杯（ 2019年产 ）500ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-           
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0619/2c8dbf4020174ccb94447ea1c3d825dd_2.jpg'>
-              <span class='liebiao_text'>42度 扳倒井 福樽 （2012年产）480ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
+            <li class='liebiao_item' v-for="(homepic,index) in pictureList" :key="index">
+              <img :src='homepic.img'>
+              <span class='liebiao_text'>{{homepic.productname}}</span>
+              <span class='liebiao_one'>{{homepic.name}}</span>
+              <span class='liebiao_two'>￥{{homepic.price}}</span>
+            </li> 
            
             <!-- ------------------------------------------------- -->
           </ul>
@@ -413,7 +292,7 @@ export default {
       },     
     },
   async mounted() {
-    this.$store.dispatch('getPictureAction')
+    this.$store.dispatch('getPictureListAction'),
     new Swiper(".swiper-container", {
       autoplay: true,
       loop: true,
@@ -425,7 +304,7 @@ export default {
   },
   computed:{
       ...mapState({
-        picture: state => state.picture
+        pictureList: state => state.pictureList
       })
     },
 
@@ -583,7 +462,8 @@ export default {
           height 112px
       .zhengpin
         width 100%
-        height 30px 
+        height 30px
+        
       .icon_one
         font-size 25px
         color #ccc

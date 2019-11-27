@@ -1,14 +1,14 @@
-import {getPicture} from '../api'
-import SAVE_PICTURE from './mutation-type'
+import {getPictureList} from '../api'
+import {SAVE_PICTURELIST} from './mutation-type'
 
 
 export default{
-  async getPictureAction({commit}){
+  async getPictureListAction({commit}){
     //1. 发送请求获取数据
-    let result = await getPicture()
+    let result = await getPictureList()
     if(result.code === 0){
       // 2. 调用mutation，将数据交给mutation
-      commit(SAVE_PICTURE, {picture: result.data})
+      commit(SAVE_PICTURELIST, {pictureList: result.data})
     }
   },
 }
