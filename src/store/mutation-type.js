@@ -1,0 +1,1 @@
+export const SAVE_PICTURE = 'save_picture'

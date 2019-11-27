@@ -3,7 +3,7 @@ import Detail from '../Detail/Detail.vue'
 import Home from '../Home/Home.vue'
 import Profile from '../Profile/Profile.vue'
 import Shop from '../Shop/Shop.vue'
-
+import Search from '../components/Search/Search.vue'
 export default [
   {
     path: '/class',
@@ -46,6 +46,10 @@ export default [
     meta:{
       navShow:true
     }
+  },
+  {
+    path:'/search',
+    component:Search,
   },
   {
     path:'/',

@@ -4,7 +4,7 @@
 
   <div class='header'>
     <!-- 搜索框 -->
-    <div class="search">
+    <div class="search" @click="goPath('/Search')">
       <!--            icon图标-->
       <i class="box iconfont icon-sousuo"></i>
       <input class="txt" type="text" placeholder="请输入商品名称">
@@ -70,43 +70,43 @@
 
    <!-- 白酒十个图片 -->
     <div class='baijiu'>
-      <div class='baijiu_item'>        
+      <div class='baijiu_item' @click="goPath('/show')">        
        <img src='http://img0.gjw.com/famous/2018/0713/34c90a46f767478897208adca7681ae4.jpg'>
       </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0713/3f257a2d80cb49e5a1e65340201329f0.jpg'>
     </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0713/a8da83fed83c44f2a7a9f64862cd6489.jpg'>
      </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0713/229cbdd4a909417ba6218c7e21b48131.jpg'>
      </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0801/8bf04e420aa64ccfbb9ae530f82ddd7d.jpg'>
      </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0713/b0041913b9844e519782312fa1c66118.jpg'>
      </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0713/b0041913b9844e519782312fa1c66118.jpg'>
      </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0713/c7ee25ce88144ebe9f1c743c64df2000.jpg'>
      </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0801/8fccd4a2c00947869641bd32c0a4c42f.jpg'>
      </div>
 
-     <div class='baijiu_item'>
+     <div class='baijiu_item' @click="goPath('/show')">
        <img src='http://img0.gjw.com/famous/2018/0801/a4b34eda8bc24782994a4d86cd2528ce.jpg'>
      </div>
     </div>
@@ -181,36 +181,14 @@
         <van-tab title="精选">
           <ul class='liebiao'>
             <!-- ------------------------------------------------- -->
-            <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0814/ffdef549b26d4b1fb696cfb0a27d3b84_2.jpg'>
-              <span class='liebiao_text'>【整箱装】53度 茅台 蓝色迎宾酒 (2017年产) 425ml*6瓶</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
+            <li class='liebiao_item' v-for="(homepic,index) in picture" :key="index">
+              <img :src='homepic.data.Pic'>
+              <span class='liebiao_text'>{{homepic.data.Name}}</span>
+              <span class='liebiao_one'>{{homepic.data.listAtivityName.Ativityname}}</span>
+              <span class='liebiao_two'>￥{{homepic.data.ExtField}}</span>
             </li>
           
 
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2017/1013/05d96515d0ab4f7db04ed877d01d26f9_2.jpg'>
-              <span class='liebiao_text'>52度 剑南春 1000ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-          
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2018/0914/02398b678ef7481cadcf38c28916cbec_2.jpg'>
-              <span class='liebiao_text'>53度 茅台 飞天带杯（ 2019年产 ）500ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
-           
-
-           <li class='liebiao_item'>
-              <img src='http://img0.gjw.com/product/2019/0619/2c8dbf4020174ccb94447ea1c3d825dd_2.jpg'>
-              <span class='liebiao_text'>42度 扳倒井 福樽 （2012年产）480ml</span>
-              <span class='liebiao_one'>限时抢购</span>
-              <span class='liebiao_two'>￥469</span>
-           </li>
            
             <!-- ------------------------------------------------- -->
           </ul>
@@ -415,12 +393,25 @@
 
 
 <script type="text/ecmascript-6">
+
 import Swiper from "swiper";
 import "swiper/css/swiper.min.css";
-
-
+import {mapState} from 'vuex'
+import homeDate from '../data/home.json'
+ 
 export default {
-  mounted() {
+  data(){
+    return{
+      datas:{}
+    }
+  },
+   methods: {
+      goPath(path){
+      this.$route.path !== path && this.$router.replace(path)
+      },     
+    },
+  async mounted() {
+    this.$store.dispatch('getPictureAction')
     new Swiper(".swiper-container", {
       autoplay: true,
       loop: true,
@@ -429,11 +420,19 @@ export default {
       }
     })
   },
+  computed:{
+      ...mapState({
+        picture: state => state.picture
+      })
+    },
    data() {
     return {
       active: 2
     }
-  }
+  },
+  mounted() {
+    this.datas = homeDate
+  },
 }
 </script>
 
