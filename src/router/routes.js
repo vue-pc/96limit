@@ -11,6 +11,7 @@ import Search from '../components/Search/Search.vue'
 
 import Show from '../Class/Show/Show.vue'
 
+
 export default [
   {
     path: '/class',
@@ -82,8 +83,9 @@ export default [
     path:'/search',
     component:Search
   },
+
   {
-    path: '/',
+    path:'/',
     redirect:'/home'
   }
 ]

@@ -4,15 +4,11 @@ import qs from 'qs'
 import axios from 'axios'
 import router from '../router'
 import {MessageBox} from 'mint-ui'
-const instance = axios.create({
-  baseURL:'/api'
-})
-
-
-
 
 // 生成一个Axios的伪实例, 具备Axios实例对象的所有属性，方法，但是不是真实的Axios实例
-
+const instance = axios.create({
+  baseURL: '/api'
+})
 
 
 // 1. 添加请求拦截器
