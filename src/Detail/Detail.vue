@@ -175,7 +175,7 @@ import BScroll from 'better-scroll'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import { Area } from 'vant'
-// Vue.use(Area);
+
 
 
 import Pinglun from '../pages/Pinglun/Pinglun'

@@ -1,6 +1,6 @@
 npm i babel-plugin-import -D<template>
   <header class="header">
-    <i class="iconfont icon-jiantou"></i>
+    <i class="iconfont icon-jiantou" @click="$router.replace('/home')"></i>
     <span>{{title}}</span>
     <slot></slot>
 
