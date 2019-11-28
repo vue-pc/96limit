@@ -15,12 +15,12 @@
         <li class="navItem"  
         data-id="pingjia" 
          @click="toChange('/pinglun')"
-         :class="{active:this.scrollTop*1 >780 && this.scrollTop*1 < 1610}"
+         :class="{active:this.scrollTop*1 >780 && this.scrollTop*1 < 1280}"
         >评价</li>
 
         <li class="navItem"  
         data-id="xiangqing" 
-        :class="{active:this.scrollTop*1 >1610}"
+        :class="{active:this.scrollTop*1 >1280}"
         >详情</li> 
       </ul>
     </div>
