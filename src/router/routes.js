@@ -3,6 +3,7 @@ import Detail from '../Detail/Detail.vue'
 import Home from '../Home/Home.vue'
 import Profile from '../Profile/Profile.vue'
 import Shop from '../Shop/Shop.vue'
+import HeaderGuide from '../components/HeaderGuide/HeaderGuide.vue'
 
 export default [
   {
@@ -45,6 +46,15 @@ export default [
     component:Home,
     meta:{
       navShow:true
-    }
+    },
+  },
+  {
+    path:'/headerGuide',
+    component:HeaderGuide
+
+  },
+  {
+    path:'/',
+    redirect:'/home'
   }
 ]
