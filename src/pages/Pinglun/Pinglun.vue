@@ -63,7 +63,7 @@ import {mapState} from 'vuex'
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
  #pinglun 
    .review
     height 44px

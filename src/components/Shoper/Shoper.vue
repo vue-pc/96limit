@@ -13,7 +13,7 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   #shoper
     .tu
       margin-bottom 50px
