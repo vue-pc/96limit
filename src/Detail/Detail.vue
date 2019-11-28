@@ -1,7 +1,7 @@
 <template>
   <div id="detail">
     <div class="toper">
-      <div class="back"><</div>
+      <div class="back" @click="$router.replace('/home')"><</div>
       <div class="top-title">53度 茅台飞天 （ 2019年产 ）200ml</div>
     </div>
     <div class="kongbai"></div>
@@ -154,10 +154,10 @@
     </div>
     <div class="footer">
       <div class="home">
-        <i class="iconfont icon-shouye"></i>首页
+        <i class="iconfont icon-home"></i>首页
       </div>
       <div class="shoping">
-        <i class="iconfont icon-gouwuche"></i>购物车
+        <i class="iconfont icon-gouwuche1"></i>购物车
         <span class="num">{{Bnum}}</span>
       </div>
       <div class="buy" @click="upBnum">
@@ -544,7 +544,7 @@ import {mapState} from 'vuex'
       padding 5px
       border-right 1px solid #eee
       color #666
-      .icon-shouye
+      .icon-home
         font-size 24px
     .shoping
       width 56px
@@ -556,7 +556,7 @@ import {mapState} from 'vuex'
       padding 5px
       border-right 1px solid #eee
       color #666
-      .icon-gouwuche
+      .icon-gouwuche1
         font-size 24px
       .num
         display block
