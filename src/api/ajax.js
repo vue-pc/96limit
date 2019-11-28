@@ -33,9 +33,7 @@ instance.interceptors.request.use(config => {
   }
  
   return config
-})
-
-
+}),
 // 2. 添加响应拦截器
 instance.interceptors.response.use(
   response => response.data,

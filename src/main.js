@@ -3,7 +3,7 @@ import App from './App.vue'
 import 'lib-flexible/flexible'
 import router from './router'
 import store from './store'
-import Vant from 'vant'
+// import Vant from 'vant'
 
 
 
@@ -14,7 +14,7 @@ import * as API from './api'
 import { Tab, Tabs ,Lazyload,CountDown } from 'vant';
 
 
-Vue.use(Vant);
+
 Vue.prototype.$API = API
 Vue.use(Tab).use(Tabs);
 Vue.use(Lazyload);

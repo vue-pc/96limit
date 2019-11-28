@@ -13,29 +13,13 @@ export const getDetailRev = () => ajax({
 
 // 定义发送请求的方法
 
-
-
-
 export const getClassList = () => ajax({
   url: '/classList',
 })
-
-
-
-
-
-
 // 定义发送请求的方法
-
-
 export const getPictureList = () => ajax({
   url:'/pictureList',
 })
-
-
-
-import ajax from './ajax'
-
 export const getWines = () => ajax({
   url: '/wines'
 })
