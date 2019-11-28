@@ -4293,7 +4293,7 @@ import {mapState} from 'vuex'
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
  #detail
   .toper
     width 100%
