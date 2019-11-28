@@ -1,6 +1,6 @@
 import {
   getWines,
-} from '../../api'
+} from "../api"
 
 
 import { 
