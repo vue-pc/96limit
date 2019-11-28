@@ -37,7 +37,7 @@
         <i class="iconfont "></i>
       </span>
       <span>
-        我得
+        我的
       </span>
     </div>
   </div>

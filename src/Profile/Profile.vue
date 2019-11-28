@@ -5,7 +5,7 @@
         <div class="no_login">
           <img src="../../start/1.png">
           
-          <div class="text">
+          <div class="text" @click="goPath('/login')">
             <p>登录/注册 &gt;</p>
           </div>    
         </div>        
@@ -79,24 +79,43 @@
         <p>推荐商品</p>
       <div class="line"></div>
       </div>
-
-      <div></div>
-    </div>
+      <div class="tp_box">
+        <div>
+          <img src="../../start/10.jpg">
+            <div class="price">￥308</div> 
+            <div class="mask"></div>
+        </div>
+         <div>
+          <img src="../../start/11.jpg">
+            <div class="price">￥308</div> 
+            <div class="mask"></div>
+        </div>
+         <div>
+          <img src="../../start/12.jpg">
+            <div class="price">￥308</div> 
+            <div class="mask"></div>
+        </div>
+      </div>
+    </div>  
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   export default {
+    methods: {
+      goPath(path) {
+        this.$route.path !== path && this.$router.replace(path);
+      },
+    }
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" >
+<style lang="stylus" rel="stylesheet/stylus" scoped >
 .app
   width 100%
-  height 750px
+  height 950px
   background #ccc
   .header
-   
     width 375px
     height 160px
     .usr_top 
@@ -147,13 +166,18 @@
       .right 
         height 44px 
         .t3
-          float left 
-          padding 10px
+          box-sizing border-box
+          float left
+          padding left 50px
+          margin-right 230px
         .t4
+          box-sizing border-box
+          padding 20px
           float right
-          padding 10px
+          margin-top -30px
+          
       .van-conent
-          height 81px
+          height 30px
         .zhuanghu
           float left
           margin-top 80px
@@ -161,13 +185,13 @@
           font-size 13px
           color #33333
   .nav_top
-      // width 375px
-      // height 104px
+      width 375px
+      height 104px
     .nav_list 
       width 100%
       height 94px
       display flex
-     .nav_item
+    .nav_item
       width 94px
       height 30px   
       img 
@@ -176,20 +200,53 @@
         padding 20px
         margin-right 50px
   .hot
-    padding 13px
+    padding-left  20px
     .bg_tit 
       width 300px
-      height 34px
+      height 50px
+      margin-top 50px
+      padding-top 40px
+      padding-right -50px 
       p 
-        padding-left 130px 
+        width 76px
+        height 16px
+        line-height 16px
+        text-align center
         font-size 14px
-
+        background-color #f4f5f7
+        margin 0 auto
+        position relative
+        
+        
     .line 
       height 1px
       background #EEAA22
-
-
-
-
-
+      margin -5px auto
+     .tp_box
+        display flex
+        img 
+          width 130px
+          height 130px
+          margin-top -20px
+          padding 5px
+          padding-left -50px
+          
+          
+          // margin-right -50px
+        .price
+          position absolute
+          width 140px
+          height 25px
+          background rgba(0,0,0, 0.4 )
+          margin-top -25px
+        .mask
+          // font-size 14px  
+          position absolute
+          height 25px
+          bottom 0
+          left 0
+          color #fffff
+          z-index 3
+          padding-right 20px
+      
 </style>

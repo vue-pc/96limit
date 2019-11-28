@@ -3,6 +3,8 @@ import Detail from '../Detail/Detail.vue'
 import Home from '../Home/Home.vue'
 import Profile from '../Profile/Profile.vue'
 import Shop from '../Shop/Shop.vue'
+import login from '../login/login.vue'
+import Note from '../Note/note.vue'
 
 export default [
   {
@@ -50,6 +52,16 @@ export default [
   {
     path: '/',
     redirect: '/profile'
-  }
+  },
+  {
+    path: '/login',
+    component:login,
+  },
+  {
+    path: '/note',
+    component:Note,
+  },
+  
+
 
 ]
