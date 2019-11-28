@@ -1,6 +1,5 @@
 import {
   getClassList,
-  getPicture,
   getPictureList,
   getWines,
 } from '../api'
