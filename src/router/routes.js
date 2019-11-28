@@ -11,6 +11,7 @@ import Search from '../components/Search/Search.vue'
 
 import Show from '../Class/Show/Show.vue'
 
+import HeaderGuide from '../components/HeaderGuide/HeaderGuide.vue'
 
 export default [
   {
@@ -83,7 +84,11 @@ export default [
     path:'/search',
     component:Search
   },
+  {
+    path:'/headerGuide',
+    component:HeaderGuide
 
+  },
   {
     path:'/',
     redirect:'/home'

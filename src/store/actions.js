@@ -1,13 +1,15 @@
 import {
   getClassList,
   getPicture,
-  getPictureList
+  getPictureList,
+  getWines,
 } from '../api'
 
 import {
   SAVE_CLASSLIST,
   SAV_PICTURE,
-  SAVE_PICTURELIST
+  SAVE_PICTURELIST,
+  SAVE_WINES 
 } from "./mutation-type";
 
 
@@ -39,11 +41,15 @@ export default {
       commit(SAVE_PICTURELIST, {pictureList: result.data})
     }
   },
+  async getWinesAction({commit}){
+    let result = await getWines()
+    if (result.code===0) {
+      commit(SAVE_WINES,{wines:result.data})
+    }
+    // console.log(result)
+     
+
+  },
 }
-
-
-
-
-
 
 
