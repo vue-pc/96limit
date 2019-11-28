@@ -48,13 +48,6 @@ export default [
     ]
   },
   {
-    path: '/home',
-    component: Home,
-    meta: {
-      navShow:true
-    }
-  },
-  {
     path: '/profile',
     component: Profile,
     meta: {
