@@ -93,7 +93,7 @@ Vue.component(Button.name, Button);
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" >
  .header {
     width: 100%;
     height: 40px;

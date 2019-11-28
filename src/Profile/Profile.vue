@@ -80,20 +80,20 @@
       <div class="line"></div>
       </div>
       <div class="tp_box">
-        <div>
+        <div class="tp_box_q" >
           <img src="../../start/10.jpg">
-            <div class="price">￥308</div> 
-            <div class="mask"></div>
+          <div class="price">￥308</div> 
+          <!-- <div class="t6">1223</div> -->
         </div>
-         <div>
+         <div class="tp_box_q" >
           <img src="../../start/11.jpg">
-            <div class="price">￥308</div> 
-            <div class="mask"></div>
+            <div class="price">￥1314</div> 
+            
         </div>
-         <div>
+         <div class="tp_box_q" >
           <img src="../../start/12.jpg">
-            <div class="price">￥308</div> 
-            <div class="mask"></div>
+            <div class="price">￥520</div> 
+            <!-- <div class="mask"></div> -->
         </div>
       </div>
     </div>  
@@ -110,11 +110,11 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped >
+<style lang="stylus" rel="stylesheet/stylus" scoped>
 .app
   width 100%
   height 950px
-  background #ccc
+  // background #ccc
   .header
     width 375px
     height 160px
@@ -124,15 +124,18 @@
       display flex
       .no_login
         width 100%
-        background black
+        background #2e313a
+        color #ffff
         img 
           width 80px
           height 80px
-          margin 20px
+          color white
+          margin-left -250px
+          margin-top 20px
 
         .text 
           font-size 15px
-          margin-left 130px
+          margin-left -60px
           margin-top -80px
         p
           color white
@@ -200,7 +203,7 @@
         padding 20px
         margin-right 50px
   .hot
-    padding-left  20px
+    //padding-left  20px
     .bg_tit 
       width 300px
       height 50px
@@ -222,31 +225,29 @@
       height 1px
       background #EEAA22
       margin -5px auto
-     .tp_box
+    .tp_box
         display flex
+        width 375px
+        height 160px
+      .tp_box_q
+        width 130px
+        height 130px
+        margin-right 10px
+                        
         img 
           width 130px
           height 130px
-          margin-top -20px
-          padding 5px
-          padding-left -50px
-          
-          
-          // margin-right -50px
-        .price
+          position relative
+        .price 
+          z-index 100
           position absolute
-          width 140px
-          height 25px
-          background rgba(0,0,0, 0.4 )
-          margin-top -25px
-        .mask
-          // font-size 14px  
-          position absolute
-          height 25px
-          bottom 0
           left 0
-          color #fffff
-          z-index 3
-          padding-right 20px
-      
+          bottom  -37px     
+          width 130px
+          height 25px
+          color white
+          text-align center
+          background #333
+         
+          
 </style>

@@ -162,6 +162,6 @@ export default {
   .button {
     height: 50px;
     border-radius: 30px;
+    }
   }
-}
 </style>
