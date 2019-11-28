@@ -18,7 +18,6 @@ const mutations = {
 
 const actions = {
   async getDetailRevAction({commit}){
-    console.log("00000000000000000000000000000000000000000")
     let result = await getDetailRev()
     if(result.code === 0){
       commit(SAVE_MAINREV, {mainRev: result.data})
