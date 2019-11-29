@@ -4293,8 +4293,10 @@ import {mapState} from 'vuex'
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
  #detail
+  width 100%
+  height 100%
   .toper
     width 100%
     height 48px
@@ -4351,14 +4353,18 @@ import {mapState} from 'vuex'
           border-bottom 1px solid #f44
   .main
     margin-top 44px
-    height calc(100vh - 110px)
+    height 2800px
+    width 375px
+    overflow hidden
     .mianList
       .mianItem
+        width 375px
+        overflow hidden
         .swiper-container
           .swiper-wrapper
             .swiper-slide
               img
-                width 100%
+                width 375px
                 height 375px
         .hairline
           width 100%

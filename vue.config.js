@@ -3,7 +3,7 @@ const px2rem = require('postcss-px2rem')
 
 // 配置postcs-px2rem
 const postcss = px2rem({
-  remUnit: 37.5   // 设计稿等分后的rem值   750/10 = 75
+  remUnit: 37.5   // 设计稿等分后的rem值  
 })
 
 function resolve (dir) {

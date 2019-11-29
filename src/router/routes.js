@@ -12,6 +12,8 @@ import Search from '../components/Search/Search.vue'
 import Show from '../Class/Show/Show.vue'
 
 import HeaderGuide from '../components/HeaderGuide/HeaderGuide.vue'
+import login from '../login/login.vue'
+import Note from '../Note/note.vue'
 
 export default [
   {
@@ -69,21 +71,19 @@ export default [
     }
   },
   {
-    path:'/pinglun',
+    path: '/',
+    redirect: '/profile'
+  },
+  {
+    path: '/login',
+    component:login,
+  },
+  {
+    path: '/note',
+    component:Note,
+  },
+  {
+    path: '/pinglun',
     component:Pinglun,
   },
-  {
-
-    path:'/search',
-    component:Search
-  },
-  {
-    path:'/headerGuide',
-    component:HeaderGuide
-
-  },
-  {
-    path:'/',
-    redirect:'/home'
-  }
 ]

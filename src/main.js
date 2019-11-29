@@ -10,6 +10,8 @@ import store from './store'
 
 
 
+import Vant from 'vant'
+// Vue.use(Vant);
 import * as API from './api'
 import { Tab, Tabs ,Lazyload,CountDown } from 'vant';
 
@@ -33,6 +35,8 @@ Vue.use(Stepper);
 
 Vue.use(Checkbox).use(CheckboxGroup);
 Vue.use(SubmitBar);
+import 'lib-flexible/flexible'
+import './veevalidate'
 Vue.config.productionTip = false
 Vue.component(Navbar.name, Navbar);
 Vue.component(TabItem.name, TabItem);

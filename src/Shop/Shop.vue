@@ -152,3 +152,6 @@ import {mapState} from 'vuex'
         line-height 50px
         text-align center
 </style>
+
+
+
