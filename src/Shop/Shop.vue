@@ -21,7 +21,7 @@
       <div class="btn_com" v-show="isFont">
         <span
           >合计:
-          <p>￥0.00</p></span
+          <p>￥{{num}}</p></span
         >
         <div class="button">结算(0)</div>
       </div>
@@ -44,7 +44,8 @@ import {mapState} from 'vuex'
       return{
         font:'编辑',
         isFont:true,
-        Checked: false
+        Checked: false,
+        num:'5'
 
       }
     },
@@ -61,12 +62,13 @@ import {mapState} from 'vuex'
         // wines:result.jiuxianziying
         wines:state => state.wines
       }),
+      // this.num = 
     // this.$emit('')
     },
     methods:{
      checkAll(event){
-       var e = event.currentTarget;
-       console.log(e)
+      //  var e = event.currentTarget;
+      //  console.log(e)
        
      }
     }

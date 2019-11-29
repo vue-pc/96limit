@@ -20,6 +20,7 @@ export const getClassList = () => ajax({
 export const getPictureList = () => ajax({
   url:'/pictureList',
 })
+
 export const getWines = () => ajax({
   url: '/wines'
 })
