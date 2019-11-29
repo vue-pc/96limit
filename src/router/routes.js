@@ -82,7 +82,8 @@ export default [
     path: '/note',
     component:Note,
   },
-  
-
-
+  {
+    path: '/pinglun',
+    component:Pinglun,
+  },
 ]
